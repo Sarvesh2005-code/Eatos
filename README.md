@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# Eatos 🍎
+> *Your Intelligent Nutrition Companion*
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Eatos is a futuristic, AI-powered nutrition tracking application designed to make healthy eating effortless and engaging. Built with **React Native** (Expo) and styled with a sleek, glassmorphic design system, Eatos leverages **Google Gemini AI** to revolutionize how you log and analyze your meals.
 
-## Get started
+## 🌟 Key Features
 
-1. Install dependencies
+*   **📸 AI Food Recognition**: Snap a photo or describe your meal. Eatos uses **Google Gemini AI** to instantly identify dishes, estimate portion sizes, and calculate nutritional breakdown (calories, macros) with impressive accuracy.
+*   **🗣️ Voice & Text Logging**: Simply speak or type what you ate. The natural language processing understands context and details, making manual entry a thing of the past.
+*   **📊 Comprehensive Analytics**: Visualize your progress with beautiful, interactive charts powered by `victory-native`. Track daily calorie intake, macronutrient distribution (protein, carbs, fats), and long-term trends.
+*   **🍽️ Personalized Recommendations**: Get smart meal suggestions based on your dietary goals, preferences, and past eating habits.
+*   **🔐 Secure & Private**: Robust authentication and data storage powered by **Firebase** (Auth, Firestore) ensures your health data remains private and secure.
+*   **✨ Premium UI/UX**: Experience a modern, fluid interface featuring glassmorphism, smooth animations (`react-native-reanimated`), and haptic feedback (`expo-haptics`) for a delightful user experience.
+*   **📱 Cross-Platform**: Optimized for both iOS and Android, offering a native feel on every device.
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tech Stack
 
-2. Start the app
+*   **Framework**: [React Native](https://reactnative.dev/) with [Expo](https://expo.dev/) (SDK 52+)
+*   **Language**: [TypeScript](https://www.typescriptlang.org/)
+*   **AI Engine**: [Google Gemini Pro / Flash](https://deepmind.google/technologies/gemini/) (`@google/generative-ai`)
+*   **Backend**: [Firebase](https://firebase.google.com/) (Auth, Firestore, Storage)
+*   **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/)
+*   **Styling**: Custom Glassmorphic Design System, `react-native-svg`
+*   **Animations**: `react-native-reanimated`
+*   **Storage**: `@react-native-async-storage/async-storage`
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Getting Started
 
-In the output, you'll find options to open the app in a
+Follow these steps to set up the project locally.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Prerequisites
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+*   **Node.js** (v18 or newer recommended)
+*   **npm** or **yarn**
+*   **Expo Go** app on your physical device (iOS/Android) OR an Android Emulator / iOS Simulator.
 
-## Get a fresh project
+### Installation
 
-When you're ready, run:
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Sarvesh2005-code/Eatos.git
+    cd Eatos/eatos
+    ```
 
-```bash
-npm run reset-project
-```
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3.  **Environment Setup**
+    Create a `.env` file in the root directory and add your API keys:
+    ```env
+    EXPO_PUBLIC_GEMINI_API_KEY=your_google_gemini_api_key
+    EXPO_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+    # Add other Firebase config keys as needed
+    ```
+    > **Note**: For Firebase Native setup (optional but recommended for production features), ensure `google-services.json` (Android) and `GoogleService-Info.plist` (iOS) are placed in their respective `android/app` and `ios` directories.
 
-## Learn more
+4.  **Start the application**
+    ```bash
+    npx expo start
+    ```
 
-To learn more about developing your project with Expo, look at the following resources:
+5.  **Run on Device/Emulator**
+    *   **Physical Device**: Scan the QR code with the **Expo Go** app (Android) or Camera app (iOS).
+    *   **Emulator**: Press `a` for Android or `i` for iOS in the terminal.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🤝 Contributing
 
-## Join the community
+Contributions are welcome! Please open an issue or submit a pull request for any bugs, features, or improvements.
 
-Join our community of developers creating universal apps.
+## 📄 License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the [MIT License](LICENSE).
