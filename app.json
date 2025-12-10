@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "eatos",
+    "name": "Eatos",
     "slug": "eatos",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,16 +8,35 @@
     "scheme": "eatos",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "description": "AI-powered nutrition companion",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eatos.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Eatos uses the camera to scan food items and barcodes for nutritional information.",
+        "NSMicrophoneUsageDescription": "Eatos uses the microphone for voice input to log meals.",
+        "NSPhotoLibraryUsageDescription": "Eatos needs access to your photos to upload food images.",
+        "NSHealthShareUsageDescription": "Eatos integrates with Apple Health to provide personalized nutrition insights.",
+        "NSHealthUpdateUsageDescription": "Eatos may write nutritional data to Apple Health to keep your health data in sync."
+      }
     },
     "android": {
+      "package": "com.eatos.app",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FFFFFF",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
@@ -38,7 +57,17 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-camera",
+      "expo-barcode-scanner",
+      "expo-secure-store",
+      [
+        "@react-native-firebase/app",
+        {
+          "androidGoogleServicesFile": "./google-services.json"
+        }
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
